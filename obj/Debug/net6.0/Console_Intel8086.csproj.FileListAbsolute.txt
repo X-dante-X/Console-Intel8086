@@ -1,0 +1,15 @@
+C:\Users\solom\source\repos\Console_Intel8086\Console_Intel8086\bin\Debug\net6.0\Console_Intel8086.exe
+C:\Users\solom\source\repos\Console_Intel8086\Console_Intel8086\bin\Debug\net6.0\Console_Intel8086.deps.json
+C:\Users\solom\source\repos\Console_Intel8086\Console_Intel8086\bin\Debug\net6.0\Console_Intel8086.runtimeconfig.json
+C:\Users\solom\source\repos\Console_Intel8086\Console_Intel8086\bin\Debug\net6.0\Console_Intel8086.dll
+C:\Users\solom\source\repos\Console_Intel8086\Console_Intel8086\bin\Debug\net6.0\Console_Intel8086.pdb
+C:\Users\solom\source\repos\Console_Intel8086\Console_Intel8086\obj\Debug\net6.0\Console_Intel8086.csproj.AssemblyReference.cache
+C:\Users\solom\source\repos\Console_Intel8086\Console_Intel8086\obj\Debug\net6.0\Console_Intel8086.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\solom\source\repos\Console_Intel8086\Console_Intel8086\obj\Debug\net6.0\Console_Intel8086.AssemblyInfoInputs.cache
+C:\Users\solom\source\repos\Console_Intel8086\Console_Intel8086\obj\Debug\net6.0\Console_Intel8086.AssemblyInfo.cs
+C:\Users\solom\source\repos\Console_Intel8086\Console_Intel8086\obj\Debug\net6.0\Console_Intel8086.csproj.CoreCompileInputs.cache
+C:\Users\solom\source\repos\Console_Intel8086\Console_Intel8086\obj\Debug\net6.0\Console_Intel8086.dll
+C:\Users\solom\source\repos\Console_Intel8086\Console_Intel8086\obj\Debug\net6.0\refint\Console_Intel8086.dll
+C:\Users\solom\source\repos\Console_Intel8086\Console_Intel8086\obj\Debug\net6.0\Console_Intel8086.pdb
+C:\Users\solom\source\repos\Console_Intel8086\Console_Intel8086\obj\Debug\net6.0\Console_Intel8086.genruntimeconfig.cache
+C:\Users\solom\source\repos\Console_Intel8086\Console_Intel8086\obj\Debug\net6.0\ref\Console_Intel8086.dll
