@@ -66,6 +66,30 @@ namespace Intel
                             Writeout(intel);
                             break;
                         }
+                    case "NOT":
+                        {
+                            NOT(intel);
+                            Writeout(intel);
+                            break;
+                        }
+                    case "AND":
+                        {
+                            AND(intel);
+                            Writeout(intel);
+                            break;
+                        }
+                    case "OR":
+                        {
+                            OR(intel);
+                            Writeout(intel);
+                            break;
+                        }
+                    case "XOR":
+                        {
+                            XOR(intel);
+                            Writeout(intel);
+                            break;
+                        }
                     default:
                         Console.WriteLine($"{fc} - Wrong function name");
                         break;
@@ -99,6 +123,110 @@ namespace Intel
                 Console.WriteLine($"{intel[0, i]}={intel[1, i]}");
             }
         }
+
+        public static string[,] AND(string[,] intel)
+        {
+
+            Console.WriteLine("Enter registers to AND");
+            string reg1 = Console.ReadLine().ToUpper();
+            string reg2 = Console.ReadLine().ToUpper();
+            reg1 = checkreg(reg1);
+            reg2 = checkreg(reg2);
+            int index1 = 0;
+            int index2 = 0;
+
+            for (int i = 0; i < intel.GetLength(1); i++)
+            {
+                if (intel[0, i] == reg1)
+                {
+                    index1 = i;
+                }
+
+            }
+            for (int i = 0; i < intel.GetLength(1); i++)
+            {
+                if (intel[0, i] == reg2)
+                {
+                    index2 = i;
+                }
+
+            }
+            int tempreg1 = int.Parse(intel[1, index1], NumberStyles.AllowHexSpecifier);
+            int tempreg2 = int.Parse(intel[1, index2], NumberStyles.AllowHexSpecifier);
+            int and = tempreg1 & tempreg2;
+            intel[1, index1] = Convert.ToString(Convert.ToInt32(and), 16).ToUpper();
+            checklen(ref intel[1, index1]);
+            return intel;
+        }
+        public static string[,] OR(string[,] intel)
+        {
+
+            Console.WriteLine("Enter registers to OR");
+            string reg1 = Console.ReadLine().ToUpper();
+            string reg2 = Console.ReadLine().ToUpper();
+            reg1 = checkreg(reg1);
+            reg2 = checkreg(reg2);
+            int index1 = 0;
+            int index2 = 0;
+
+            for (int i = 0; i < intel.GetLength(1); i++)
+            {
+                if (intel[0, i] == reg1)
+                {
+                    index1 = i;
+                }
+
+            }
+            for (int i = 0; i < intel.GetLength(1); i++)
+            {
+                if (intel[0, i] == reg2)
+                {
+                    index2 = i;
+                }
+
+            }
+            int tempreg1 = int.Parse(intel[1, index1], NumberStyles.AllowHexSpecifier);
+            int tempreg2 = int.Parse(intel[1, index2], NumberStyles.AllowHexSpecifier);
+            int or = tempreg1 | tempreg2;
+            intel[1, index1] = Convert.ToString(Convert.ToInt32(or), 16).ToUpper();
+            checklen(ref intel[1, index1]);
+            return intel;
+        }
+        public static string[,] XOR(string[,] intel)
+        {
+
+            Console.WriteLine("Enter registers to XOR");
+            string reg1 = Console.ReadLine().ToUpper();
+            string reg2 = Console.ReadLine().ToUpper();
+            reg1 = checkreg(reg1);
+            reg2 = checkreg(reg2);
+            int index1 = 0;
+            int index2 = 0;
+
+            for (int i = 0; i < intel.GetLength(1); i++)
+            {
+                if (intel[0, i] == reg1)
+                {
+                    index1 = i;
+                }
+
+            }
+            for (int i = 0; i < intel.GetLength(1); i++)
+            {
+                if (intel[0, i] == reg2)
+                {
+                    index2 = i;
+                }
+
+            }
+            int tempreg1 = int.Parse(intel[1, index1], NumberStyles.AllowHexSpecifier);
+            int tempreg2 = int.Parse(intel[1, index2], NumberStyles.AllowHexSpecifier);
+            int xor = tempreg1 ^ tempreg2;
+            intel[1, index1] = Convert.ToString(Convert.ToInt32(xor), 16).ToUpper();
+            checklen(ref intel[1, index1]);
+            return intel;
+        }
+
         public static string[,] SUB(string[,] intel)
         {
 
@@ -130,6 +258,28 @@ namespace Intel
             int tempreg2 = int.Parse(intel[1, index2], NumberStyles.AllowHexSpecifier);
             int sub = tempreg1 - tempreg2;
             intel[1, index1] = Convert.ToString(Convert.ToInt32(sub), 16).ToUpper();
+            checklen(ref intel[1, index1]);
+            return intel;
+        }
+        public static string[,] NOT(string[,] intel)
+        {
+
+            Console.WriteLine("Enter register to NOT");
+            string reg1 = Console.ReadLine().ToUpper();
+            reg1 = checkreg(reg1);
+            int index1 = 0;
+
+            for (int i = 0; i < intel.GetLength(1); i++)
+            {
+                if (intel[0, i] == reg1)
+                {
+                    index1 = i;
+                }
+
+            }
+            int tempreg1 = int.Parse(intel[1, index1], NumberStyles.AllowHexSpecifier);
+            tempreg1= 255 - tempreg1;
+            intel[1, index1] = Convert.ToString(Convert.ToInt32(tempreg1), 16).ToUpper();
             checklen(ref intel[1, index1]);
             return intel;
         }
